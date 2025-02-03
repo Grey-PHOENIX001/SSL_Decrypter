@@ -5,6 +5,10 @@ An Python based SSL Decryption and Data Extraction tool
 
 The SSL Decryptor Tool is a two-part project designed to capture encrypted SSL/TLS traffic, extract the decryption key from the TCP handshake, and then decrypt the captured packets. The tool consists of two separate files:
 
+# Prerequisites
+Install the recommended libraries and replace the Original path for tshark in the packet_capture.py program
+Ensure to create a tmp.pcap and decypt.txt in the working directory
+
 # Packet Capturer
 This file captures SSL/TLS traffic from a specified network interface using tshark (a command-line version of Wireshark) and saves it as a PCAP file.
 Decryptor: This file reads the PCAP file, extracts the TCP handshake packets, uses the public key obtained to establish an SSL/TLS connection, and then decrypts the captured packets.
