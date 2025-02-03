@@ -21,5 +21,5 @@ Allows for analysis of previously encrypted network traffic
 Provides insight into secure communication protocols used by online services
 Can be used for educational purposes or to identify potential security vulnerabilities
 
-# Note that this project requires knowledge of network protocol analysis, SSL/TLS encryption, and Python programming. Additionally, please ensure that you have the necessary permissions to capture network traffic in your environment.
+Note that this project requires knowledge of network protocol analysis, SSL/TLS encryption, and Python programming. Additionally, please ensure that you have the necessary permissions to capture network traffic in your environment.
 
