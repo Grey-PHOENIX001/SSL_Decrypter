@@ -20,12 +20,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 def list_network_interfaces() -> List[str]:
-    """
-    Lists all network interfaces available on the system.
 
-    Returns:
-        A sorted list of interface names that can be used for packet capture.
-    """
     interfaces = []
     try:
         if os.name == 'nt':  # Windows
@@ -54,17 +49,7 @@ def list_network_interfaces() -> List[str]:
         return sorted(unique_interfaces)
 
 def capture_ssl_tls_traffic(selected_interface: str, tshark_path: str, output_file: str) -> None:
-    """
-    Captures SSL/TLS traffic from a specified interface using tshark and saves it to a pcap file.
-
-    Args:
-        selected_interface (str): Network interface name
-        tshark_path (str): Path to the tshark executable
-        output_file (str): Path to the output PCAP file
-
-    Raises:
-        Exception: If there's an error during capture
-    """
+  
     try:
         # Verify tshark installation
         if not os.path.isfile(tshark_path):
@@ -95,14 +80,7 @@ def capture_ssl_tls_traffic(selected_interface: str, tshark_path: str, output_fi
         raise
 
 def main() -> None:
-    """
-    Main function to execute the network interface selection and packet capture.
 
-    User Interface Example:
-    1. Lists available interfaces
-    2. Allows user to select an interface or press Enter for default
-    3. Captures traffic and saves it to output file
-    """
     try:
         logger.info("Starting SSL Traffic Capture")
 
@@ -137,7 +115,7 @@ def main() -> None:
         # Ask user to provide the tshark path
         while True:
             try:
-                tshark_path = ('C:\\Program Files\\Wireshark\\tshark.exe')
+                tshark_path = ('your_tshark_path_here')
                 if not tshark_path:
                     tshark_path = shutil.which('tshark')
                 break
